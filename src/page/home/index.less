@@ -1,0 +1,43 @@
+.link() {
+  color: white;
+  margin: 0 20px;
+  padding: 10px 0;
+  position: relative;
+  transition: .3s ease-out .1s;
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: .3s;
+  }
+  &:hover{
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.home {
+  height: 100vh;
+  // background-image: url('https://source.unsplash.com/1600x900/?beach');
+  background-image: url('./images/bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .menu {
+    position: fixed;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    >a {
+      text-decoration: none;
+      .link();
+    }
+  }
+}
