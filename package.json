@@ -37,7 +37,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "lint": "node_modules/eslint/bin/eslint.js src --ext .tsx --fix --cache",
-    "start": "webpack serve --open --config webpack.dev.js"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "deploy": "npm run build && git add docs && git commit -m \"deploy\" && git push"
   },
   "pre-commit": [
     "lint"

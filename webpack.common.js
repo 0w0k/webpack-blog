@@ -40,7 +40,7 @@ module.exports = {
   },
   output: {
     publicPath: 'auto',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './docs'),
     filename: 'script/[name].[contenthash].js',
     assetModuleFilename: 'asset/[hash][ext][query]',
   },
