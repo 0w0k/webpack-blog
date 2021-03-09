@@ -31,7 +31,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'import/no-extraneous-dependencies': [2, { devDependencies: ['webpack.*.js'] }],
+    'import/no-extraneous-dependencies': [2, { devDependencies: ['*/webpack.*.js'] }],
   },
   settings: {
     'import/resolver': {
