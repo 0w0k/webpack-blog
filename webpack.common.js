@@ -64,11 +64,12 @@ module.exports = {
       template: 'src/index.html',
     }),
     new ModuleFederationPlugin({
-      filename: 'remoteEntry.js',
       name: 'blog',
+      filename: 'remoteEntry.js',
       exposes: {
         './Blog': './src/page/blog/index',
       },
+      shared: ['react', 'react-dom'],
     }),
   ],
   resolve: {
